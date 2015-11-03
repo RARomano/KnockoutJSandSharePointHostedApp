@@ -8,6 +8,7 @@
 	<script type="text/javascript" src="../Scripts/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script>
 	<script type="text/javascript" src="/_layouts/15/sp.js"></script>
+	<script type="text/javascript" src="../Scripts/lists.js"></script>
 	<script type="text/javascript" src="../Scripts/createItemModel.js"></script>
 	<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.3.0.js"></script>
 	
@@ -15,15 +16,37 @@
 	<link rel="Stylesheet" type="text/css" href="../Content/app.css" />
 
 	<script type="text/javascript">
+		var getParameterByName = function (name) {
+			var match = RegExp('[?&]' + name + '=([^&]*)', 'i').exec(window.location.search);
+			return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+		};
+
 		var model = new MySample.createItemModel();
+		var itemId = getParameterByName("Id");
+
 		$(document).ready(function () {
+			var url = _spPageContextInfo.webServerRelativeUrl;
 			ko.applyBindings(model);
+
+			if (itemId) {
+				MySample.Lists.getSpecificItem(url, "Example", itemId, function (e, data) {
+					if (!e) {
+						var item = data.d;
+
+						model.title(item.Title);
+						model.notes(item.Note);
+					}
+				});
+			}
 
 			$("#btnSave").click(function (evt) {
 				var url = _spPageContextInfo.webServerRelativeUrl;
-				model.saveItem(url, function (err, data) {
+
+				
+
+				model.saveItem(url, itemId, function (err, data) {
 					if (!err) {
-						window.location.href = url + "/Lists/Example";
+						window.location.href = url;
 					}
 				});
 			});

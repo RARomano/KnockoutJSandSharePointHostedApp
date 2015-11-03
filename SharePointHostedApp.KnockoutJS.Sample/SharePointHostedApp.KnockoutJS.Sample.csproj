@@ -80,6 +80,7 @@
     <None Include="Scripts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{fbd42871-6cc7-4795-97a9-79bfb310e7b2}</SharePointProjectItemId>
     </None>
+    <Content Include="Pages\ListItems.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\createItemModel.js" />
@@ -88,6 +89,8 @@
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\listItemsModel.js" />
+    <Content Include="Scripts\Lists.js" />
     <Content Include="Scripts\_references.js" />
   </ItemGroup>
   <ItemGroup>

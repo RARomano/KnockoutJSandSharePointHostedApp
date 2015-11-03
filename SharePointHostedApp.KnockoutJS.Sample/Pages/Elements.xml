@@ -3,5 +3,6 @@
   <Module Name="Pages">
     <File Path="Pages\Default.aspx" Url="Pages/Default.aspx" ReplaceContent="TRUE" />
     <File Path="Pages\CreateListItem.aspx" Url="Pages/CreateListItem.aspx" ReplaceContent="TRUE" />
+    <File Path="Pages\ListItems.aspx" Url="Pages/ListItems.aspx" ReplaceContent="TRUE" />
   </Module>
 </Elements>

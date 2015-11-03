@@ -9,12 +9,19 @@ MySample.createItemModel = function () {
 		return title() ? true : false;
 	};
 
-	saveItem = function (siteUrl, callback) {
+	saveItem = function (siteUrl, itemId, callback) {
 		var ctx = new SP.ClientContext(siteUrl);
 		var web = ctx.get_web();
 		var list = web.get_lists().getByTitle('Example');
-		var itemCreateInfo = new SP.ListItemCreationInformation();
-		var item = list.addItem(itemCreateInfo);
+
+		var item;
+		if (!itemId) {
+			var itemCreateInfo = new SP.ListItemCreationInformation();
+			item = list.addItem(itemCreateInfo);
+		}
+		else {
+			item = list.getItemById(itemId);
+		}
 
 		item.set_item('Title', self.title());
 		item.set_item('Note', self.notes());
@@ -36,7 +43,9 @@ MySample.createItemModel = function () {
 
 	return {
 		saveItem: saveItem,
-		isReadyToSave: isReadyToSave
+		isReadyToSave: isReadyToSave,
+		title: title,
+		notes: notes
 	}
 
 };
