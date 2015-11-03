@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="cd47fe66-78ca-4286-bcc9-87f282fba79c" 
+        solutionId="cd47fe66-78ca-4286-bcc9-87f282fba79c" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="SharePointHostedApp.KnockoutJS.Sample"
+        sharePointProductVersion="15.0">
+  <features>
+        <featureReference itemId="0a798bc3-84c4-44e4-b241-3cc64b51dac4" />
+  </features>
+</package>
