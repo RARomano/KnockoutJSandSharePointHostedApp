@@ -5,5 +5,12 @@ In this sample I've used Knockout.JS within SharePoint Hosted Add-ins to demonst
 1. jQuery
 2. [Knockout JS](http://knockoutjs.com/documentation/introduction.html)
 
+## What is included
+In this sample, is included the following examples:
+1. New Form
+2. Edit Form
+3. List Form
+
+
 
 
