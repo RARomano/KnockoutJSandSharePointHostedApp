@@ -1,1 +1,13 @@
 ﻿/* Place custom styles below */
+.container {
+  margin: 0 auto;
+  padding: 0;
+  margin-top:50px;
+}
+
+.requiredLabel:after {
+  content:"*";
+  color: #D32929;
+}
+
+

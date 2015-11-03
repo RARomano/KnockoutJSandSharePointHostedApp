@@ -8,7 +8,7 @@
 >
   <Properties>
     <Title>SharePointHostedApp.KnockoutJS.Sample</Title>
-    <StartPage>~appWebUrl/Pages/Default.aspx?{StandardTokens}</StartPage>
+    <StartPage>~appWebUrl/Pages/CreateListItem.aspx?{StandardTokens}</StartPage>
   </Properties>
 
   <AppPrincipal>
